@@ -1,5 +1,5 @@
 <?php
-namespace addElement\one\a;
+namespace addElement\sample\sample;
 
 use src\template\main\mainCore;
 use src\template\commands\commandLoader;
@@ -7,8 +7,7 @@ use src\template\commands\commandLoader;
 class main extends mainCore{
 
     public function onEnable(){
-        $this->sendMessage("aaaaaaaaaaaaaaaaaaaaaaaaaaaa ");
-        $this->getCommandLoader()->registerCommand("a", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaas", $this);
+        $this->getCommandLoader()->registerCommand("sample", "test", $this);
     }
 
     public function commandExcute($commandName, $args){

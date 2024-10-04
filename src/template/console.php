@@ -1,6 +1,7 @@
 <?php
 namespace src\template;
-use src\template\main\main;
+
+use src\template\main\mainCore;
 
 spl_autoload_register(function($name){
     $name = str_replace("\\",'/',$name);
@@ -8,7 +9,8 @@ spl_autoload_register(function($name){
 });
 
 
-$main = new main();
+$main = new mainCore();
+$main->onLoad();
 while(true){
     $stdin = trim(fgets(STDIN));
     if(!empty($stdin)){
